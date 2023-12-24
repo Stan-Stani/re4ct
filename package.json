@@ -1,0 +1,20 @@
+{
+  "name": "re4ct",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/Stan-Stani/re4ct.git",
+  "author": "StanStani",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "^5.0.10"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
