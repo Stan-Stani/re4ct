@@ -2,6 +2,7 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.ts'
+import { isFirstUpdatePhase, useState } from './r4ct.ts'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
@@ -22,3 +23,15 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 `
 
 setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+for (let i = 0; i < 2; i++) {
+  const [number, setNumber] = useState(0)
+  const [string, setString] = useState('A')
+
+  console.log({ number, string })
+
+  setNumber(5)
+  setString('Z')
+
+  isFirstUpdatePhase.current = false
+}
